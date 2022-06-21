@@ -1,8 +1,8 @@
 import logo from "../assets/logo.png"
-import carrito from "../assets/carrito.png"
 import usuario from "../assets/usuario.png"
 import favs from "../assets/favs.png"
 import "../App.css"
+import CardWidget from "./CartWidget"
 
 const NavBar = () => {
     return (
@@ -13,7 +13,7 @@ const NavBar = () => {
                 <a style={styles.subText} href="http://">Buscador</a>
                 <img src={usuario} alt="usuario" />
                 <img src={favs} alt="favoritos" />
-                <img src={carrito} alt="carrito" />
+                <CardWidget />
             </nav>
         </header>
     )
