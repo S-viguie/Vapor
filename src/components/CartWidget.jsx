@@ -1,26 +1,12 @@
 import carrito from "../assets/carrito.png"
-import "../App.css"
 
 const CardWidget = () => {
     return (
-        <div style={styles.container}>
+        <div className="flex">
             <img src={carrito} alt="carrito" />
-            <p style={styles.pStyle}>0</p>
+            <p className="font-Barlow text-white text-3xl ml-2 mt-1">0</p>
         </div>
     )
 }
 
 export default CardWidget
-
-const styles = {
-    pStyle: {
-        fontFamily: "'Barlow', sans-serif",
-        color: "#00ffb0",
-        fontSize: "1em",
-        margin: "3px 0 0 5px"
-    },
-
-    container: {
-        display: "flex",
-    }
-}

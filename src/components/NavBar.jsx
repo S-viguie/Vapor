@@ -1,16 +1,16 @@
 import logo from "../assets/logo.png"
 import usuario from "../assets/usuario.png"
 import favs from "../assets/favs.png"
-import "../App.css"
+import "../index.css"
 import CardWidget from "./CartWidget"
 
 const NavBar = () => {
     return (
-        <header style={styles.headerStyle}>
-            <img src={logo} alt="logo" />
-            <nav style={styles.navStyle}>
-                <a style={styles.subText} href="http://">Categorias</a>
-                <a style={styles.subText} href="http://">Buscador</a>
+        <header className="flex flex-col items-center">
+            <img className="w-[500px]" src={logo} alt="logo" />
+            <nav className="flex justify-evenly items-center w-full py-4">
+                <a className="font-Barlow text-3xl text-white" href="http://">Categorias</a>
+                <a className="font-Barlow text-3xl text-black bg-white outline outline-1 rounded-full pb-1 px-3" href="http://">Buscador</a>
                 <img src={usuario} alt="usuario" />
                 <img src={favs} alt="favoritos" />
                 <CardWidget />
@@ -20,25 +20,3 @@ const NavBar = () => {
 }
 
 export default NavBar
-
-const styles = {
-    headerStyle: {
-        backgroundColor: "#003024",
-    },
-
-    navStyle: {
-        display: "flex",
-        justifyContent: "space-evenly",
-    },
-
-    subText: {
-        fontFamily: "'Barlow', sans-serif",
-        fontSize: "2em",
-        color: "#00ffb0",
-        textDecoration: "none",
-    },
-
-    buscadorStyle: {
-        border: "#61dafb"
-    }
-}
