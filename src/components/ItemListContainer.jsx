@@ -1,5 +1,4 @@
 import {useEffect, useState} from 'react'
-import ItemCount from "./ItemCount"
 import ItemList from "./ItemList";
 import { RingLoader } from 'react-spinners';
 
@@ -9,13 +8,13 @@ const prodIniciales = [
     {title: "Age of Empires II", id:2, price:300, description:"Estrategia / 2019", pictureUrl:"https://as01.epimg.net/meristation/imagenes/2019/09/14/game_cover/609478601568448183.jpg"}
 ]
 
-const promesa = new Promise((resolve, reject) => {
+const promesa = new Promise((resolve) => {
     setTimeout(() => {
         resolve(prodIniciales)
     }, 2000);
 })
 
-const ItemListContainer = ({ mensaje }) => {
+const ItemListContainer = () => {
 
     const [productos, setProductos] = useState([])
     const [loading, setLoading] = useState(false)
@@ -32,7 +31,6 @@ const ItemListContainer = ({ mensaje }) => {
 
     return (
         <>
-            <ItemCount stock={5} />
             {loading ? <div className='flex justify-center mt-20'><RingLoader color="#ffffff" size={120} /></div> : <ItemList prods={productos} />}
         </>
     )

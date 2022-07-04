@@ -17,7 +17,7 @@ const ItemCount = ({stock, initial = 1}) => {
     }
 
     return (
-        <div className="flex justify-center w-64 mx-auto mt-10 border-2 rounded-xl border-white bg-white">
+        <div className="flex justify-center w-64 mt-5 border-2 rounded-xl border-white bg-white">
             <button className="font-Barlow text-black text-3xl" onClick={restar}>-</button>
             <p className="font-Barlow text-black text-3xl mx-10">{contador}</p>
             <button className="font-Barlow text-black text-3xl" onClick={sumar}>+</button>
