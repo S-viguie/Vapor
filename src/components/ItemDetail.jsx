@@ -1,7 +1,18 @@
 import React from 'react'
 import ItemCount from './ItemCount'
+import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const ItemDetail = ({detail}) => {
+
+    const [finalized, setFinalized] = useState(false)
+    const [cantidad, setCantidad] = useState()
+
+    const onAdd = (contador) => {
+        setFinalized(true)
+        setCantidad(contador)
+    }
+
     return (
         <div className='flex flex-col items-center w-[1000px] mx-auto mt-10 pt-5 bg-Rojo-Dark'>
             <div className='flex mb-5'>
@@ -10,7 +21,7 @@ const ItemDetail = ({detail}) => {
                     <h2 className='font-Barlow text-4xl text-white'>{detail.title}</h2>
                     <h2 className='font-Barlow text-xl text-white'>Calificación: {detail.rating}</h2>
                     <h2 className='font-Barlow text-6xl text-white'>${detail.price}</h2>
-                    <ItemCount stock={10} />
+                    {finalized ? <Link to="/cart" ><button className='w-72 mt-5 border-2 rounded-xl border-white bg-white font-Barlow text-black text-3xl ml-10'>Finalizar compra</button></Link> : <ItemCount stock={10} onAdd={onAdd} />}
                 </div>
             </div>
             <div className='flex justify-between w-[950px]'>
