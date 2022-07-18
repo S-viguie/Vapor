@@ -11,6 +11,7 @@ const slide = () => {
     return (
         <>
             <Swiper
+                className="mb-14"
                 centeredSlides={true}
                 autoplay={{
                     delay: 2500,
