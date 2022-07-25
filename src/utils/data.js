@@ -1,25 +1,9 @@
 const prodIniciales = [
-    {
-        title: "Grand Theft Auto V", 
-        id:0, 
-        price:500, 
-        rating:"9/10",
-        category:"Accion", 
-        año:"2013", 
-        pictureUrl:"https://as01.epimg.net//meristation/imagenes/2020/05/18/game_cover/459398911589803277.jpg",
-        pictureUrl2:'https://s1.gaming-cdn.com/images/products/186/616x353/grand-theft-auto-v-pc-juego-rockstar-cover.jpg?v=1647095361',
-        review: "Grand Theft Auto V para PC es un juego de acción y aventuras, el quinto de la serie GTA. Como ya es tradición en los juegos de esta serie, se obtienen puntos mediante la comisión de delitos. El juego alterna entre la narrativa visual y la jugabilidad en tercera y en primera persona. El jugador toma el papel de tres criminales tratando de huir de una determinada agencia del gobierno y cometiendo asaltos. No se elige un solo personaje para jugar, la narrativa del juego salta de un personaje a otro.",
-        processor: "Intel Core i5 3470 @ 3.2GHz (4 CPUs) / AMD X8 FX-8350 @ 4GHz (8 CPUs)",
-        memory: "8 GB RAM",
-        graphics: "NVIDIA GTX 660 2GB / AMD HD 7870 2GB",
-        storage: "72 GB available space",
-    },
 
     {
         title: "Red Dead Redemption II", 
-        id:1, 
-        price:500, 
-        rating:"9/10",
+        price:7200, 
+        rating:"8/10",
         category:"Accion", 
         año:"2019", 
         pictureUrl:"https://as01.epimg.net//meristation/imagenes/2019/10/04/game_cover/625467111570207373.jpg",
@@ -33,9 +17,8 @@ const prodIniciales = [
 
     {
         title: "God of War", 
-        id:2, 
-        price:500, 
-        rating:"/10",
+        price:4200, 
+        rating:"7/10",
         category:"Accion", 
         año:"2022", 
         pictureUrl:"https://as01.epimg.net//meristation/imagenes/2020/09/17/game_cover/479791341600340811.jpg",
@@ -49,9 +32,8 @@ const prodIniciales = [
 
     {
         title: "No Man's Sky", 
-        id:3, 
-        price:500, 
-        rating:"/10",
+        price:2300, 
+        rating:"7/10",
         category:"Accion", 
         año:"2016", 
         pictureUrl:"https://as01.epimg.net//meristation/imagenes/2022/06/23/game_cover/904785361655992339.jpg",
@@ -65,9 +47,8 @@ const prodIniciales = [
 
     {
         title: "Assassin's Creed Odyssey", 
-        id:4, 
-        price:500, 
-        rating:"/10",
+        price:3000, 
+        rating:"10/10",
         category:"Accion", 
         año:"2018", 
         pictureUrl:"https://as01.epimg.net//meristation/imagenes/2019/11/11/game_cover/64888371573505629.jpg",
@@ -81,9 +62,8 @@ const prodIniciales = [
 
     {
         title: "Farcry 4", 
-        id:5, 
-        price:500, 
-        rating:"/10",
+        price:1500, 
+        rating:"7/10",
         category:"Fps", 
         año:"2014", 
         pictureUrl:"https://as01.epimg.net//meristation/imagenes/2017/12/28/game_cover/1514448000.jpg",
@@ -97,9 +77,8 @@ const prodIniciales = [
 
     {
         title: "Overwatch", 
-        id:6, 
-        price:700, 
-        rating:"/10",
+        price:4000, 
+        rating:"7/10",
         category:"Fps", 
         año:"2016", 
         pictureUrl:"https://as01.epimg.net//meristation/imagenes/2019/09/05/game_cover/974564061567671841.jpg",
@@ -113,9 +92,8 @@ const prodIniciales = [
 
     {
         title: "Counter Strike: GO", 
-        id:7, 
-        price:500, 
-        rating:"/10",
+        price:1750, 
+        rating:"8/10",
         category:"Fps", 
         año:"2012", 
         pictureUrl:"https://as01.epimg.net//meristation/imagenes/2017/10/20/game_cover/1508454000.jpg",
@@ -129,9 +107,8 @@ const prodIniciales = [
 
     {
         title: "Payday 2", 
-        id:8, 
-        price:500, 
-        rating:"/10",
+        price:150, 
+        rating:"9/10",
         category:"Fps", 
         año:"2013", 
         pictureUrl:"https://as01.epimg.net//meristation/imagenes/2017/11/27/game_cover/1511762400.jpg",
@@ -145,9 +122,8 @@ const prodIniciales = [
 
     {
         title: "Call of Duty 2", 
-        id:9, 
-        price:500, 
-        rating:"/10",
+        price:260, 
+        rating:"9/10",
         category:"Fps", 
         año:"2005", 
         pictureUrl:"https://as01.epimg.net//meristation/imagenes/2016/11/09/game_cover/1478710800.jpg",
@@ -161,9 +137,8 @@ const prodIniciales = [
 
     {
         title: "World of Warcraft", 
-        id:10, 
-        price:500, 
-        rating:"/10",
+        price:5000, 
+        rating:"10/10",
         category:"Rpg", 
         año:"2004", 
         pictureUrl:"https://as01.epimg.net//meristation/imagenes/2022/04/20/game_cover/234977551650442993.jpg",
@@ -177,9 +152,8 @@ const prodIniciales = [
 
     {
         title: "Fallout 4", 
-        id:11, 
-        price:500, 
-        rating:"/10",
+        price:800, 
+        rating:"8/10",
         category:"Rpg", 
         año:"2015", 
         pictureUrl:"https://as01.epimg.net//meristation/imagenes/2018/01/10/game_cover/1515596400.jpg",
@@ -193,9 +167,8 @@ const prodIniciales = [
 
     {
         title: "Horizon: Zero Dawn", 
-        id:12, 
-        price:500, 
-        rating:"/10",
+        price:4200, 
+        rating:"7/10",
         category:"Rpg", 
         año:"2020", 
         pictureUrl:"https://as01.epimg.net//meristation/imagenes/2020/03/10/game_cover/17414581583854575.jpg",
@@ -209,9 +182,8 @@ const prodIniciales = [
 
     {
         title: "Final Fantasy X-X2", 
-        id:13, 
-        price:500, 
-        rating:"/10",
+        price:330, 
+        rating:"10/10",
         category:"Rpg", 
         año:"2016", 
         pictureUrl:"https://as01.epimg.net//meristation/imagenes/2016/07/05/game_cover/1467748800.jpg",
@@ -225,9 +197,8 @@ const prodIniciales = [
 
     {
         title: "The Elder Scrolls V: Skyrim", 
-        id:14, 
-        price:500, 
-        rating:"/10",
+        price:2000, 
+        rating:"9/10",
         category:"Rpg", 
         año:"2016", 
         pictureUrl:"https://as01.epimg.net//meristation/imagenes/2017/10/01/game_cover/1506848400.jpg",
@@ -241,9 +212,8 @@ const prodIniciales = [
 
     {
         title: "F1", 
-        id:15, 
-        price:500, 
-        rating:"/10",
+        price:6400, 
+        rating:"7/10",
         category:"Deportes", 
         año:"2022", 
         pictureUrl:"https://pbs.twimg.com/media/FR1qgMUXsAMLeox.jpg",
@@ -257,9 +227,8 @@ const prodIniciales = [
 
     {
         title: "Fifa 22", 
-        id:16, 
-        price:500, 
-        rating:"/10",
+        price:5500, 
+        rating:"8/10",
         category:"Deportes", 
         año:"2021", 
         pictureUrl:"https://as01.epimg.net//meristation/imagenes/2021/07/13/game_cover/347646311626170418.jpg",
@@ -273,9 +242,8 @@ const prodIniciales = [
 
     {
         title: "Forza Horizon 5", 
-        id:17, 
-        price:500, 
-        rating:"/10",
+        price:3600, 
+        rating:"8/10",
         category:"Deportes", 
         año:"2021", 
         pictureUrl:"https://as01.epimg.net//meristation/imagenes/2021/08/24/game_cover/755583641629831675.jpg",
@@ -289,9 +257,8 @@ const prodIniciales = [
 
     {
         title: "NBA 2k22", 
-        id:18, 
-        price:500, 
-        rating:"/10",
+        price:6000, 
+        rating:"7/10",
         category:"Deportes", 
         año:"2021", 
         pictureUrl:"https://as01.epimg.net//meristation/imagenes/2021/07/15/game_cover/101805761626305377.jpg",
@@ -305,9 +272,8 @@ const prodIniciales = [
 
     {
         title: "Madden NFL 22", 
-        id:19, 
-        price:500, 
-        rating:"/10",
+        price:3600, 
+        rating:"8/10",
         category:"Deportes", 
         año:"2021", 
         pictureUrl:"https://as01.epimg.net//meristation/imagenes/2021/07/13/game_cover/190099791626186008.jpg",
@@ -321,9 +287,8 @@ const prodIniciales = [
 
     {
         title: "Civilization VI", 
-        id:20, 
         price:500, 
-        rating:"/10",
+        rating:"9/10",
         category:"Estrategia", 
         año:"2016", 
         pictureUrl:"https://as01.epimg.net//meristation/imagenes/2020/08/14/game_cover/768899381597392339.jpg",
@@ -337,9 +302,8 @@ const prodIniciales = [
 
     {
         title: "Age of Empires II DE", 
-        id:21, 
         price:300, 
-        rating:"/10",
+        rating:"10/10",
         category:"Estrategia", 
         año:"2019", 
         pictureUrl:"https://as01.epimg.net/meristation/imagenes/2019/09/14/game_cover/609478601568448183.jpg",
@@ -353,9 +317,8 @@ const prodIniciales = [
 
     {
         title: "Rise of Nations", 
-        id:22, 
-        price:500, 
-        rating:"/10",
+        price:200, 
+        rating:"9/10",
         category:"Estrategia", 
         año:"2014", 
         pictureUrl:"https://as01.epimg.net//meristation/imagenes/2016/06/15/game_cover/1465966800.jpg",
@@ -369,9 +332,8 @@ const prodIniciales = [
 
     {
         title: "StarCraft II", 
-        id:23, 
-        price:500, 
-        rating:"/10",
+        price:300, 
+        rating:"9/10",
         category:"Estrategia", 
         año:"2010", 
         pictureUrl:"https://as01.epimg.net//meristation/imagenes/2017/03/09/game_cover/1489078800.jpg",
@@ -385,9 +347,8 @@ const prodIniciales = [
 
     {
         title: "Northgard", 
-        id:24, 
-        price:500, 
-        rating:"/10",
+        price:300, 
+        rating:"8/10",
         category:"Estrategia", 
         año:"2018", 
         pictureUrl:"https://as01.epimg.net//meristation/imagenes/2019/10/04/game_cover/514606711570215073.jpg",

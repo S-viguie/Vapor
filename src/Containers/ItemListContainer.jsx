@@ -2,7 +2,8 @@ import {useEffect, useState} from 'react'
 import ItemList from "./ItemList";
 import { RingLoader } from 'react-spinners';
 import { useParams } from 'react-router-dom';
-import prodIniciales from "../utils/data";
+import { db } from "../firebase/firebase"
+import { getDocs, collection, query, where} from "firebase/firestore"
 
 const ItemListContainer = () => {
 
@@ -12,12 +13,22 @@ const ItemListContainer = () => {
 
     useEffect(() => {
         setLoading(true)
-        setTimeout(() => {
-            setProductos(categoryName ? prodIniciales.filter((prod) => prod.category === categoryName) : prodIniciales)
-            setLoading(false)
-        }, 2000);
-        },
-        [categoryName])
+        const prodCollection = collection (db, "productos")
+        const q = query(prodCollection, where("category", "==", `${categoryName}`))
+
+        getDocs(categoryName ? q : prodCollection)
+            .then(res=> {
+                const lista = res.docs.map(doc => {
+                    return {
+                        id: doc.id,
+                        ...doc.data()
+                    }
+                })
+                setProductos(lista)
+            })
+            .catch(err => console.log(err))
+            .finally(()=> setLoading(false))
+    }, [categoryName])
 
     return (
         <>
