@@ -1,17 +1,10 @@
-import { useContext, useState, useEffect } from 'react'
+import { useContext} from 'react'
 import { Link } from "react-router-dom"
 import { cartContext } from '../Context/CartContext'
 
 const Cart = () => {
 
-  const {productsCart, removeItem, clear} = useContext(cartContext)
-  const [priceTotal, setPriceTotal] = useState()
-
-  useEffect (() => {
-    const aux = productsCart.map((product)=> product.quantity*product.price)
-    const total = aux.reduce((acc,pr)=> acc+pr, 0)
-    setPriceTotal(total)
-  },[productsCart])
+  const {productsCart, removeItem, clear, priceTotal} = useContext(cartContext)
 
   return (
     productsCart.length !==0 ? 
@@ -38,6 +31,7 @@ const Cart = () => {
       )}
       <div className='flex justify-between w-[1000px]'>
         <button className='font-Barlow text-2xl bg-white text-black rounded-full p-2' onClick={clear}>Limpiar</button>
+        <Link to="/cart/finish"> <button className='font-Barlow text-2xl bg-white text-black rounded-full p-2'>Confirmar</button> </Link>
         <h2 className='font-Barlow text-5xl text-white'>Total: ${priceTotal}</h2>
       </div>
     </div> : 

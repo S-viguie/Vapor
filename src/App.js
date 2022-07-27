@@ -5,6 +5,7 @@ import Cart from './Containers/Cart'
 import Slide from './components/Slide';
 import CartProvider from './Context/CartContext';
 import {BrowserRouter, Routes, Route,} from "react-router-dom";
+import Form from './Containers/Form';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path='/cart' element={<Cart />} />
           <Route path='/category/:categoryName' element={<ItemListContainer />} />
           <Route path='/item/:itemId' element={<ItemDetailContainer />} />
+          <Route path='/cart/finish' element={<Form />} />
         </Routes>
       </CartProvider>
     </BrowserRouter>
