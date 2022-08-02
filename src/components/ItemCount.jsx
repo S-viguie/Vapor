@@ -16,11 +16,11 @@ const ItemCount = ({stock, initial = 1, onAdd}) => {
     }
 
     return (
-        <div className="flex justify-center w-72 mt-5 border-2 rounded-xl border-white bg-white">
-            <button className="font-Barlow text-black text-3xl" onClick={restar}>-</button>
-            <p className="font-Barlow text-black text-3xl mx-10">{contador}</p>
-            <button className="font-Barlow text-black text-3xl" onClick={sumar}>+</button>
-            <button className="font-Barlow text-black text-3xl ml-10" onClick={agregar}>Agregar</button>
+        <div className="flex font-Barlow text-white justify-center w-72 mt-5 p-2 border-2 rounded-xl border-Oro bg-[#461111] shadow-[20px_20px_50px_-15px_rgba(0,0,0,0.5)]">
+            <button className="text-3xl hover:text-Oro" onClick={restar}>-</button>
+            <p className="text-3xl mx-10">{contador}</p>
+            <button className="text-3xl hover:text-Oro" onClick={sumar}>+</button>
+            <button className="text-3xl ml-10 hover:text-Oro" onClick={agregar}>Agregar</button>
         </div>
     )
 }

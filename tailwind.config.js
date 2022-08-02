@@ -8,7 +8,8 @@ module.exports = {
       colors: {
         "Rojo-Dark": "#3D0000",
         "Rojo-Medio": "#950101",
-        "Rojo-Claro": "#FF0000"
+        "Rojo-Claro": "#FF0000",
+        "Oro": "#CCA738"
       }
     },
     fontFamily: {

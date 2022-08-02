@@ -3,7 +3,8 @@ import ItemList from "./ItemList";
 import { RingLoader } from 'react-spinners';
 import { useParams } from 'react-router-dom';
 import { db } from "../firebase/firebase"
-import { getDocs, collection, query, where} from "firebase/firestore"
+import { getDocs, collection, query, where, orderBy, limit} from "firebase/firestore"
+import Indice from '../components/Indice';
 
 const ItemListContainer = () => {
 
@@ -15,8 +16,9 @@ const ItemListContainer = () => {
         setLoading(true)
         const prodCollection = collection (db, "productos")
         const q = query(prodCollection, where("category", "==", `${categoryName}`))
+        const p = query(prodCollection, orderBy("title"), limit(7))
 
-        getDocs(categoryName ? q : prodCollection)
+        getDocs(categoryName ? q : p)
             .then(res=> {
                 const lista = res.docs.map(doc => {
                     return {
@@ -32,6 +34,7 @@ const ItemListContainer = () => {
 
     return (
         <>
+            {categoryName ? <Indice cat={categoryName} /> : <p></p>}
             {loading ? <div className='flex justify-center mt-20'><RingLoader color="#ffffff" size={120} /></div> : <ItemList prods={productos} />}
         </>
     )
