@@ -24,20 +24,20 @@ const Cart = () => {
               <h2 className='font-Barlow text-5xl text-white'>${product.quantity*product.price}</h2>
             </div>
             <div className='flex flex-col justify-center ml-16'>
-              <button className='font-Barlow text-6xl h-[60px] w-[60px] rounded-full border-2 border-Oro bg-white text-Rojo-Medio' onClick={()=> removeItem(product.id)}>-</button>
+              <button className='font-Barlow text-6xl h-[60px] w-[60px] rounded-full border-2 border-Oro bg-[#E8dede] text-Rojo-Medio' onClick={()=> removeItem(product.id)}>-</button>
             </div>
           </div>
         </div>
       )}
       <div className='flex justify-between w-[1000px]'>
-        <button className='font-Barlow text-2xl bg-[#461111] text-white border-2 border-Oro rounded-full p-2 shadow-[20px_20px_50px_-15px_rgba(0,0,0,0.5)] hover:text-Oro' onClick={clear}>Limpiar</button>
-        <Link to="/cart/finish"> <button className='font-Barlow text-2xl bg-[#461111] text-white border-2 border-Oro rounded-full p-2 shadow-[20px_20px_50px_-15px_rgba(0,0,0,0.5)] hover:text-Oro'>Confirmar</button> </Link>
+        <button className='font-Barlow text-2xl bg-[#461111] hover:text-Oro text-white border border-Oro rounded-full p-2' onClick={clear}>Limpiar</button>
+        <Link to="/cart/finish"> <button className='font-Barlow text-2xl bg-[#461111] hover:text-Oro text-white border border-Oro rounded-full p-2'>Confirmar</button> </Link>
         <h2 className='font-Barlow text-5xl text-white'>Total: ${priceTotal}</h2>
       </div>
     </div> : 
-    <div className='flex flex-col items-center'>
+    <div className='flex flex-col items-center h-[300px]'>
       <h1 className='font-Barlow text-5xl text-white'>No hay productos</h1>
-      <Link to="/"> <button className='font-Barlow text-2xl bg-[#461111] text-white border-2 border-Oro rounded-full p-2 mt-10 shadow-[20px_20px_50px_-15px_rgba(0,0,0,0.5)] hover:text-Oro'>Volver</button> </Link>
+      <Link to="/"> <button className='font-Barlow text-2xl bg-[#461111] hover:text-Oro text-white border border-Oro rounded-full p-2 mt-10'>Volver</button> </Link>
     </div>
   )
 }

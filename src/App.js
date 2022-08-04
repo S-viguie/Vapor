@@ -8,6 +8,7 @@ import FavProvider from './Context/FavContext'
 import {BrowserRouter, Routes, Route,} from "react-router-dom";
 import Form from './Containers/Form';
 import Fav from './Containers/Fav'
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           </Routes>
         </FavProvider>
       </CartProvider>
+      <Footer />
     </BrowserRouter>
   );
 }

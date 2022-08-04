@@ -35,7 +35,7 @@ const ItemListContainer = () => {
     return (
         <>
             {categoryName ? <Indice cat={categoryName} /> : <p></p>}
-            {loading ? <div className='flex justify-center mt-20'><RingLoader color="#ffffff" size={120} /></div> : <ItemList prods={productos} />}
+            {loading ? <div className='flex justify-center mt-20 h-[1000px]'><RingLoader color="#ffffff" size={120} /></div> : <ItemList prods={productos} />}
         </>
     )
 }

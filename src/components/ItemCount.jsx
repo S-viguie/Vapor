@@ -16,7 +16,7 @@ const ItemCount = ({stock, initial = 1, onAdd}) => {
     }
 
     return (
-        <div className="flex font-Barlow text-white justify-center w-72 mt-5 p-2 border-2 rounded-xl border-Oro bg-[#461111] shadow-[20px_20px_50px_-15px_rgba(0,0,0,0.5)]">
+        <div className="flex font-Barlow text-white justify-center w-72 mt-5 p-2 border-2 rounded-xl border-Oro bg-[#461111]">
             <button className="text-3xl hover:text-Oro" onClick={restar}>-</button>
             <p className="text-3xl mx-10">{contador}</p>
             <button className="text-3xl hover:text-Oro" onClick={sumar}>+</button>

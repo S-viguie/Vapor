@@ -45,17 +45,17 @@ const Form = () => {
     return (
         <>
             <fieldset>
-                <form onSubmit={(evt)=>evt.preventDefault()} className="flex flex-col w-[500px] mx-auto border rounded-lg border-white p-5 bg-red-900">
+                <form onSubmit={(evt)=>evt.preventDefault()} className="flex flex-col w-[500px] mx-auto border-2 rounded-lg border-Oro p-5 bg-Rojo-Dark">
                     <label className="font-Barlow text-4xl text-white" htmlFor="nombre">Nombre: </label>
-                    <input onChange={(evt)=>setNombre(evt.target.value)} className="w-60 bg-red-100 mb-5 mt-2" type="text" name="nombre" id="" />
+                    <input onChange={(evt)=>setNombre(evt.target.value)} className="font-Barlow w-60 mb-5 mt-2 border border-Oro rounded-lg bg-white outline-none" type="text" name="nombre" id="" />
                     <label className="font-Barlow text-4xl text-white" htmlFor="telefono">Teléfono: </label>
-                    <input onChange={(evt)=>setTel(evt.target.value)} className="w-60 bg-red-100 mb-5 mt-2" type="text" name="telefono" />
+                    <input onChange={(evt)=>setTel(evt.target.value)} className="font-Barlow w-60 border border-Oro rounded-lg bg-white outline-none mb-5 mt-2" type="text" name="telefono" />
                     <label className="font-Barlow text-4xl text-white" htmlFor="email">Mail: </label>
-                    <input onChange={(evt)=>setMail(evt.target.value)} className="w-60 bg-red-100 mb-5 mt-2" type="email" name="email" />
+                    <input onChange={(evt)=>setMail(evt.target.value)} className="font-Barlow w-60 border border-Oro rounded-lg bg-white outline-none mb-5 mt-2" type="email" name="email" />
                     <label className="font-Barlow text-4xl text-white" htmlFor="comentario">Comentarios: </label>
-                    <input onChange={(evt)=>setComm(evt.target.value)} className="h-20 bg-red-100 mb-5 mt-2" type="text" name="comentario" />
+                    <input onChange={(evt)=>setComm(evt.target.value)} className="font-Barlow h-20 border border-Oro rounded-lg bg-white outline-none mb-5 mt-2" type="text" name="comentario" />
                     <h2 className='font-Barlow text-5xl text-white mx-auto my-5'>Total: ${priceTotal}</h2>
-                    <button onClick={()=>checkout()} type="submit" className='font-Barlow text-2xl bg-white text-black rounded-full p-2 mt-5'>Finalizar compra</button>
+                    <button onClick={()=>checkout()} type="submit" className='font-Barlow text-2xl hover:text-Oro text-white bg-[#461111] border border-Oro rounded-full p-2 mt-5'>Finalizar compra</button>
                 </form>
             </fieldset>
             {loading ? <div className='flex justify-center mt-20'><RingLoader color="#ffffff" size={120} /></div> : (idVenta !==undefined ? <h2 className="font-Barlow text-4xl text-white text-center mt-10">Tu orden de compra es: {idVenta}</h2> : <p></p>)}

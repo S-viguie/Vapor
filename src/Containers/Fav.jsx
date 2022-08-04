@@ -20,15 +20,15 @@ const Fav = () => {
           </div>
           <div className='flex justify-end items-center'>
             <div className='flex flex-col justify-center ml-16'>
-              <button className='font-Barlow text-6xl h-[60px] w-[60px] rounded-full border-2 border-Oro bg-white text-Rojo-Medio' onClick={()=>removeFav(product)}>-</button>
+              <button className='font-Barlow text-6xl h-[60px] w-[60px] rounded-full border border-Oro bg-[#E8dede] text-Rojo-Medio' onClick={()=>removeFav(product)}>-</button>
             </div>
           </div>
         </div>
       )} 
     </div> :
-    <div className='flex flex-col items-center'>
+    <div className='flex flex-col items-center h-[300px]'>
       <h1 className='font-Barlow text-5xl text-white'>No hay favoritos</h1>
-      <Link to="/"> <button className='font-Barlow text-2xl bg-[#461111] text-white border-2 border-Oro rounded-full p-2 mt-10 hover:text-Oro'>Volver</button> </Link>
+      <Link to="/"> <button className='font-Barlow text-2xl bg-[#461111] hover:text-Oro text-white border border-Oro rounded-full p-2 mt-10'>Volver</button> </Link>
     </div>
   )
 }

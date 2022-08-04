@@ -28,7 +28,7 @@ const ItemDetail = ({detail}) => {
                         <h2 className='font-Barlow text-4xl text-white text-center'>{detail.title}</h2>
                         <h2 className='font-Barlow text-xl text-white'> <img className='absolute w-6 right-[265px]' src="https://firebasestorage.googleapis.com/v0/b/vapor-c6404.appspot.com/o/estrella.png?alt=media&token=c78feb37-0989-4e7b-83d4-05c9f207bf4c" alt="estrella"/> Calificación: {detail.rating}</h2>
                         <h2 className='font-Barlow text-6xl text-white'>${detail.price}</h2>
-                        {finalized ? <Link to="/cart" ><button className='w-64 mt-5 border-2 rounded-xl border-Oro bg-[#461111] font-Barlow text-white text-3xl p-2 hover:text-Oro shadow-[20px_20px_50px_-15px_rgba(0,0,0,0.5)]'>Finalizar compra</button></Link> : <ItemCount stock={10} onAdd={onAdd} />}
+                        {finalized ? <Link to="/cart" ><button className='w-64 mt-5 border-2 rounded-xl border-Oro bg-[#461111] font-Barlow text-white text-3xl p-2 hover:text-Oro'>Finalizar compra</button></Link> : <ItemCount stock={10} onAdd={onAdd} />}
                         <FavButton addFav={()=>addFav(detail)} />
                     </div>
                 </div>
