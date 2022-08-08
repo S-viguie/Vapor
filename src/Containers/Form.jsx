@@ -1,9 +1,10 @@
 import { addDoc, collection, serverTimestamp } from "firebase/firestore"
 import { RingLoader } from 'react-spinners';
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { useContext } from "react"
 import { cartContext } from "../Context/CartContext"
 import { db } from "../firebase/firebase"
+import { Fade } from "react-reveal";
 
 const Form = () => {
 
@@ -14,6 +15,7 @@ const Form = () => {
     const [mail, setMail] = useState("")
     const [comm, setComm] = useState("")
     const [idVenta, setIdVenta] = useState()
+    const [estado, setEstado] = useState(true)
 
     const ordenDeCompra = {
         nombre: nombre,
@@ -30,6 +32,11 @@ const Form = () => {
         total: priceTotal
     }
 
+    useEffect(() => {
+        nombre!=="" && tel!==undefined && mail!=="" && setEstado(false)
+    }, [nombre, tel, mail])
+    
+
     const checkout = () => {
         setLoading(true)
         const ventasCollection = collection(db, "ventas")
@@ -38,12 +45,15 @@ const Form = () => {
                 setIdVenta(res.id))
             .finally(()=> 
             setLoading(false),
-            clear()
+            clear(),
+            setEstado(true)
             )
     }
 
     return (
         <>
+        <Fade>
+            <h2 className="text-center font-Barlow text-5xl text-white text mb-10 underline decoration-Oro">Orden de compra</h2>
             <fieldset>
                 <form onSubmit={(evt)=>evt.preventDefault()} className="flex flex-col w-[500px] mx-auto border-2 rounded-lg border-Oro p-5 bg-Rojo-Dark">
                     <label className="font-Barlow text-4xl text-white" htmlFor="nombre">Nombre: </label>
@@ -55,9 +65,10 @@ const Form = () => {
                     <label className="font-Barlow text-4xl text-white" htmlFor="comentario">Comentarios: </label>
                     <input onChange={(evt)=>setComm(evt.target.value)} className="font-Barlow h-20 border border-Oro rounded-lg bg-white outline-none mb-5 mt-2" type="text" name="comentario" />
                     <h2 className='font-Barlow text-5xl text-white mx-auto my-5'>Total: ${priceTotal}</h2>
-                    <button onClick={()=>checkout()} type="submit" className='font-Barlow text-2xl hover:text-Oro text-white bg-[#461111] border border-Oro rounded-full p-2 mt-5'>Finalizar compra</button>
+                    <button onClick={()=>checkout()} type="submit" disabled={estado} className='font-Barlow text-2xl disabled:opacity-50 disabled:cursor-not-allowed hover:text-Oro active:scale-90 text-white bg-[#461111] border border-Oro rounded-full p-2 mt-5'>Finalizar compra</button>
                 </form>
             </fieldset>
+        </Fade>
             {loading ? <div className='flex justify-center mt-20'><RingLoader color="#ffffff" size={120} /></div> : (idVenta !==undefined ? <h2 className="font-Barlow text-4xl text-white text-center mt-10">Tu orden de compra es: {idVenta}</h2> : <p></p>)}
         </> 
     )

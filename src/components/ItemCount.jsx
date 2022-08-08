@@ -20,7 +20,7 @@ const ItemCount = ({stock, initial = 1, onAdd}) => {
             <button className="text-3xl hover:text-Oro" onClick={restar}>-</button>
             <p className="text-3xl mx-10">{contador}</p>
             <button className="text-3xl hover:text-Oro" onClick={sumar}>+</button>
-            <button className="text-3xl ml-10 hover:text-Oro" onClick={agregar}>Agregar</button>
+            <button className="text-3xl ml-10 hover:text-Oro active:scale-90" onClick={agregar}>Agregar</button>
         </div>
     )
 }

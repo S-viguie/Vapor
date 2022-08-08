@@ -6,6 +6,7 @@ import { cartContext } from '../Context/CartContext'
 import { favContext } from '../Context/FavContext'
 import FavButton from './FavButton'
 import Indice from './Indice'
+import { Fade, Slide } from 'react-reveal'
 
 const ItemDetail = ({detail}) => {
 
@@ -20,6 +21,7 @@ const ItemDetail = ({detail}) => {
 
     return (
         <>
+        <Slide duration={500} left>
             <Indice cat={detail.category} title={detail.title}/>
             <div className='flex flex-col items-center w-[1000px] mx-auto mt-10 pt-5 bg-Rojo-Dark border rounded-lg border-Oro'>
                 <div className='flex mb-5 w-[960px] justify-between items-center'>
@@ -28,7 +30,7 @@ const ItemDetail = ({detail}) => {
                         <h2 className='font-Barlow text-4xl text-white text-center'>{detail.title}</h2>
                         <h2 className='font-Barlow text-xl text-white'> <img className='absolute w-6 right-[265px]' src="https://firebasestorage.googleapis.com/v0/b/vapor-c6404.appspot.com/o/estrella.png?alt=media&token=c78feb37-0989-4e7b-83d4-05c9f207bf4c" alt="estrella"/> Calificación: {detail.rating}</h2>
                         <h2 className='font-Barlow text-6xl text-white'>${detail.price}</h2>
-                        {finalized ? <Link to="/cart" ><button className='w-64 mt-5 border-2 rounded-xl border-Oro bg-[#461111] font-Barlow text-white text-3xl p-2 hover:text-Oro'>Finalizar compra</button></Link> : <ItemCount stock={10} onAdd={onAdd} />}
+                        {finalized ? <Fade><Link to="/cart" ><button className='w-64 mt-5 border-2 rounded-xl border-Oro bg-[#461111] font-Barlow text-white text-3xl p-2 hover:text-Oro active:scale-90'>Finalizar compra</button></Link></Fade> : <ItemCount stock={10} onAdd={onAdd} />}
                         <FavButton addFav={()=>addFav(detail)} />
                     </div>
                 </div>
@@ -48,6 +50,7 @@ const ItemDetail = ({detail}) => {
                     </div>
                 </div>
             </div>
+            </Slide>
         </>
     )
 }
