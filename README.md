@@ -1,4 +1,4 @@
-#<center> VAPOR Tienda Gamer </center>
+<center> # VAPOR Tienda Gamer </center>
 
 <p align=right> <img src="https://github.com/S-viguie/Vapor/blob/master/src/assets/logo.png?raw=true" alt="logo"> </p>
 
@@ -13,7 +13,7 @@ Al confirmar la compra, se debe llenar un ***formulario***, el cual al final del
 
 ---
 
-####Para su desarrollo se utilizaron librerías:
+#### Para su desarrollo se utilizaron librerías:
 
 - React router dom: para una correcta navegabilidad dentro del sitio.
 - React spinners: indica al usuario que se está cargando el contenido.
