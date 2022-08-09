@@ -7,7 +7,7 @@ const slide = () => {
     return (
         <>
             <Swiper
-                className="mb-14"
+                className="scale-75"
                 centeredSlides={true}
                 autoplay={{
                     delay: 2500,

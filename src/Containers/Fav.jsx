@@ -17,7 +17,7 @@ const Fav = () => {
             <div className='flex justify-start'>
               <img className='w-32' src={product.pictureUrl} alt=""/>
               <div className='flex flex-col justify-evenly ml-16'>
-                <h1 className='font-Barlow text-4xl text-white'>{product.title}</h1> 
+                <Link to={`/item/${product.id}`} className='font-Barlow text-4xl text-white hover:underline decoration-Oro'>{product.title}</Link> 
                 <h2 className='font-Barlow text-l text-white'>Precio: ${product.price}</h2>
               </div>
             </div>

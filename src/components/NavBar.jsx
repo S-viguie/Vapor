@@ -46,8 +46,8 @@ const NavBar = () => {
 
     return (
         <header className="flex flex-col items-center">
-            <Link to="/"><img className="w-[500px] mt-10 transition hover:scale-110 active:scale-100" src={logo} alt="logo" /></Link>
-            <nav className="flex justify-evenly items-center w-full py-4">
+            <Link to="/"><img className="w-[300px] mt-5 transition hover:scale-110 active:scale-100" src={logo} alt="logo" /></Link>
+            <nav className="flex justify-evenly items-center w-full pt-2">
                 {<Dropdown />}
                 <div className="flex flex-col relative">
                     <input type="text" name="search" placeholder="Buscar" autoComplete="off" className="font-Barlow w-[300px] text-white text-lg border p-1 border-Oro rounded-lg bg-[#461111] outline-none bg-[url('https://firebasestorage.googleapis.com/v0/b/vapor-c6404.appspot.com/o/buscar.png?alt=media&token=5bbd6a95-7bb9-429a-8364-717376ffd066')] bg-[length:20px_20px] bg-no-repeat bg-[center_right_0.5rem] transition focus:bg-Rojo-Dark focus:scale-110" onChange={change} value={value} />
